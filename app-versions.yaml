@@ -1,0 +1,71 @@
+global:
+  image:
+    registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+    tag: 8.3.3
+
+zeebe:
+  image:
+    repository: camunda/camunda8/zeebe
+
+zeebe-gateway:
+  image:
+    repository: camunda/camunda8/zeebe
+
+operate:
+  image:
+    repository: camunda/camunda8/operate
+
+tasklist:
+  image:
+    repository: camunda/camunda8/tasklist
+
+optimize:
+  image:
+    repository: camunda/camunda8/optimize
+    tag: 8.3.3
+
+identity:
+  firstUser:
+    enabled: true
+    username: admin
+  image:
+    repository: camunda/camunda8/identity
+
+  keycloak:
+    postgresql:
+      image:
+        registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+        repository: camunda/camunda8/postgresql
+        tag: 15.5.0
+
+    image:
+      registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+      repository: camunda/camunda8/keycloak
+
+webModeler:
+  image:
+    tag: 8.3.1
+  restapi:
+    image:
+      registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+      repository: camunda/camunda8/modeler-restapi
+  webapp:
+    image:
+      registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+      repository: camunda/camunda8/modeler-webapp
+  websockets:
+    image:
+      registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+      repository: camunda/camunda8/modeler-websockets
+
+connectors:
+  image:
+    repository: camunda/camunda8/connectors-bundle
+    tag: 8.3.1
+
+elasticsearch:
+  image:
+    registry: 709825985650.dkr.ecr.us-east-1.amazonaws.com
+    repository: camunda/camunda8/elasticsearch
+    tag: 8.8.2
+
